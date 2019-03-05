@@ -1,19 +1,23 @@
-school_marks = [{'school_class': '4a', 'scores': [2,4,4,5,2]},{'school_class': '5b', 'scores': [4,3,5,4,4]}]
-scores_sum1 = 0
-scores_sum2 = 0
+school_marks = [{'school_class': '4a', 'scores': [2,4,4,5,2]},{'school_class': '5b', 'scores': [4,3,5,4,4]},
+                {'school_class': '8v', 'scores': [1,4,3,4,4]}]
 
-for i in school_marks[0]['scores']:
-    scores_sum1 += i
+a = []
+b = []
 
-average1 = scores_sum1 / len(school_marks[0]['scores'])
+average_school = 0
 
-for i in school_marks[1]['scores']:
-    scores_sum2 += i
+for i in school_marks:
+    #if 'scores' in i:
+        a += i['scores']
+for j in a:
+    average_school += j
 
-average2 = scores_sum2 / len(school_marks[1]['scores'])
+print('Средний балл по всей школе составляет {}'.format(average_school/len(a)))
 
-print('Средний балл по всей школе составляет {}'.format((average1+average2)/2))
+for k in school_marks:
+    b = k['scores']
+    average_class = 0
+    for l in b:
+        average_class += l
 
-print('Средний балл в 4А составляет {}'.format(average1))
-
-print('Средний балл в 5Б составляет {}'.format(average2))
+    print('Средний балл по классу составляет {}'.format(average_class/len(b)))
