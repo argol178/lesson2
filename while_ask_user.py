@@ -1,18 +1,17 @@
-def ask_user(user_say):
-    user_say = input('Как дела?: ')
-    dict = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", "Как тебя зовут?":"Артем"}
-    
-    for i in dict:
-        a = i
-
+def ask_user(dict):
 
     while True:
-        user_say = input('Как дела?: ')
+        user_say = input('Привет! Как твои дела? Или может хочешь что-то спросить?: ')
         if user_say == 'Хорошо':
             print('Ну норм)')
-            break
-        elif user_say == a:
-            print(dict[a])
+            break            
         else:
-            print('Подумай-ка хорошенько...')
-ask_user(None)
+            for question in dict:
+                if user_say == question:
+                    print(dict[question])
+                    break
+            else: 
+                print('Давай-ка еще разок попробуем...')
+
+dict = {"Как дела?":"Хорошо!", "Что делаешь?":"Программирую", "Как тебя зовут?":"Артем"}
+ask_user(dict)
