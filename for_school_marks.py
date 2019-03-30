@@ -6,18 +6,14 @@ school_grades = [{'school_class': '4a', 'scores': [2,4,4,5,2]},
 
 sum_school_grades = 0
 
-
 for i in school_grades:
         if 'scores' in i:
                 for j in i['scores']:
                         sum_school_grades += j
         
-
-avg_school = sum_school_grades/len(school_grades)/len(i['scores'])
-        
+avg_school = sum_school_grades/len(school_grades)/len(i['scores'])       
 print('Средний балл по всей школе составляет {}'.format(avg_school))
         
-
 for k in school_grades:
         if 'scores' in k:
                 sum_class_grades = 0

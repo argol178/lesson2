@@ -5,10 +5,10 @@ def status(a):
     if (a <= 7):
         print('Привет, детсадовец!)))')
     
-    elif (a > 7) and (a <= 18):
+    elif a <= 18:
         print('Привет, школьник!')
     
-    elif (a > 18) and (a <= 24):
+    elif a <= 24:
         print('Привет, студент!')
     
     else:
