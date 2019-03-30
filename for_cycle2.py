@@ -1,4 +1,4 @@
-str = input('Введите строку: ')
-str = list(str)
-for a in str:
+line = input('Введите строку: ')
+line = list(line)
+for a in line:
     print(a)

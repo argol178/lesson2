@@ -1,4 +1,4 @@
-def ask_user(dict):
+def ask_user(dialogue):
     try:
         while True:
             user_say = input('Привет! Как твои дела? Или может хочешь что-то спросить?: ')
@@ -6,16 +6,13 @@ def ask_user(dict):
                 print('Ну норм)')
                 break            
             else:
-                for question in dict:
+                for question in dialogue:
                     if user_say == question:
-                        print(dict[question])
+                        print(dialogue[question])
                         break
-                else: 
-                    print('Давай-ка еще разок попробуем...')
+                break 
     except KeyboardInterrupt:
-        print('   Пока!')
+        print('\n Пока')
 
-dict = {"Как дела?":"Хорошо!", "Что делаешь?":"Программирую", "Как тебя зовут?":"Артем"}
-ask_user(dict)
-
-##### После Ctrl+C завершается работа программы и без break. Как сделать, чтобы совпадало с заданием? 
+dialogue = {"Как дела?":"Хорошо!", "Что делаешь?":"Программирую", "Как тебя зовут?":"Артем"}
+ask_user(dialogue) 
